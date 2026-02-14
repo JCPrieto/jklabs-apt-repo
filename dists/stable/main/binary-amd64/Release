@@ -1,0 +1,6 @@
+Archive: stable
+Component: main
+Origin: JKLabs
+Label: JKLabs APT
+Architecture: amd64
+Description: JKLabs Debian Repository
