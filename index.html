@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JKLabs APT Repository</title>
+    <style>
+      :root {
+        --bg: #f7f7f5;
+        --card: #ffffff;
+        --text: #1c1c1c;
+        --muted: #555;
+        --accent: #0b5fff;
+        --border: #e5e5e0;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at top right, #eceff8 0%, var(--bg) 42%);
+        color: var(--text);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      main {
+        width: min(760px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 28px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+      }
+      p {
+        margin: 8px 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      code {
+        background: #f2f4f8;
+        border: 1px solid #dde3f0;
+        border-radius: 6px;
+        padding: 2px 6px;
+      }
+      pre {
+        margin: 12px 0 0;
+        overflow: auto;
+        background: #0f172a;
+        color: #e2e8f0;
+        border-radius: 10px;
+        padding: 14px;
+        line-height: 1.45;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover { text-decoration: underline; }
+      .links {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>JKLabs APT Repository</h1>
+      <p>Este sitio publica paquetes Debian para APT.</p>
+      <p>Rutas principales del repositorio:</p>
+      <ul>
+        <li><a href="./dists/">./dists/</a></li>
+        <li><a href="./pool/">./pool/</a></li>
+        <li><a href="./public.key">./public.key</a></li>
+      </ul>
+      <p>Configuración rápida:</p>
+      <pre><code>curl -fsSL https://jcprieto.github.io/jklabs-apt-repo/public.key | \
+  sudo gpg --dearmor -o /usr/share/keyrings/jklabs-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/jklabs-archive-keyring.gpg] https://jcprieto.github.io/jklabs-apt-repo stable main" | \
+  sudo tee /etc/apt/sources.list.d/jklabs.list
+
+sudo apt update</code></pre>
+      <p class="links">Más detalles en <a href="https://github.com/jcprieto/jklabs-apt-repo">GitHub</a>.</p>
+    </main>
+  </body>
+</html>

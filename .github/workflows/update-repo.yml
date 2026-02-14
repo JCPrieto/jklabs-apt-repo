@@ -100,6 +100,7 @@ jobs:
           rm -rf publish
           mkdir -p publish
           cp -R repo/dists repo/pool repo/public.key publish/
+          cp index.html publish/
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
