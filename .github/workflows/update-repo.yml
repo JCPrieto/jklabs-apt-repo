@@ -13,34 +13,42 @@ jobs:
   update-apt:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout default branch
         uses: actions/checkout@v4
 
-      - name: Install reprepro and gnupg
+      - name: Checkout gh-pages (existing repo data)
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: published
+
+      - name: Install tooling
         run: |
           sudo apt-get update
-          sudo apt-get install -y reprepro gnupg
+          sudo apt-get install -y reprepro gnupg dpkg-dev
 
       - name: Validate payload
         env:
           DEB_URL: ${{ github.event.client_payload.deb_url }}
           DEB_FILENAME: ${{ github.event.client_payload.deb_filename }}
-          DISTRO: ${{ github.event.client_payload.distro }}
-          COMPONENT: ${{ github.event.client_payload.component }}
         run: |
           test -n "$DEB_URL"
           test -n "$DEB_FILENAME"
-          test -n "$DISTRO"
-          test -n "$COMPONENT"
 
-      - name: Prepare APT repo config
-        env:
-          DISTRO: ${{ github.event.client_payload.distro }}
-          COMPONENT: ${{ github.event.client_payload.component }}
-          ARCH: ${{ github.event.client_payload.architecture }}
+      - name: Prepare working repo from published content
         run: |
           mkdir -p repo/conf repo/incoming
-          cat > repo/conf/distributions <<EOC
+          if [ -d published/dists ]; then
+            cp -R published/dists repo/
+          fi
+          if [ -d published/pool ]; then
+            cp -R published/pool repo/
+          fi
+
+      - name: Write reprepro distributions config
+        run: |
+          cat > repo/conf/distributions <<'EOC'
           Origin: JKLabs
           Label: JKLabs APT
           Suite: stable
@@ -51,45 +59,53 @@ jobs:
           SignWith: default
           EOC
 
-      - name: Import GPG key
+      - name: Import signing key
         env:
           APT_GPG_PRIVATE_KEY: ${{ secrets.APT_GPG_PRIVATE_KEY }}
         run: |
+          test -n "$APT_GPG_PRIVATE_KEY"
           echo "$APT_GPG_PRIVATE_KEY" | gpg --batch --import
           KEY_FPR=$(gpg --list-secret-keys --with-colons | awk -F: '/^fpr:/ {print $10; exit}')
+          if [ -z "$KEY_FPR" ]; then
+            echo "No GPG fingerprint found after import"
+            exit 1
+          fi
           echo "GPG_KEY_FPR=$KEY_FPR" >> "$GITHUB_ENV"
-          cat > ~/.gnupg/gpg-agent.conf <<EOC
-          allow-loopback-pinentry
-          EOC
-          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
 
-      - name: Download deb
+      - name: Download .deb
         env:
           DEB_URL: ${{ github.event.client_payload.deb_url }}
           DEB_FILENAME: ${{ github.event.client_payload.deb_filename }}
         run: |
           curl -fL "$DEB_URL" -o "repo/incoming/$DEB_FILENAME"
 
-      - name: Add package to apt repo
-        env:
-          DISTRO: stable
-          COMPONENT: main
+      - name: Include package (idempotent)
         run: |
-          reprepro -b repo includedeb "$DISTRO" repo/incoming/*.deb
+          DEB_PATH=$(ls -1 repo/incoming/*.deb | head -n 1)
+          PKG_NAME=$(dpkg-deb -f "$DEB_PATH" Package)
+          PKG_VERSION=$(dpkg-deb -f "$DEB_PATH" Version)
+
+          if reprepro -b repo list stable "$PKG_NAME" 2>/dev/null | grep -F " $PKG_VERSION" >/dev/null; then
+            echo "Package $PKG_NAME version $PKG_VERSION already present. Skipping include."
+          else
+            reprepro -b repo includedeb stable "$DEB_PATH"
+          fi
 
       - name: Export public key
         run: |
           gpg --armor --export "$GPG_KEY_FPR" > repo/public.key
 
-      - name: Publish repository to gh-pages branch
+      - name: Build publish directory
         run: |
-          rm -rf published
-          mkdir -p published
-          cp -R repo/dists repo/pool repo/public.key published/
+          rm -rf publish
+          mkdir -p publish
+          cp -R repo/dists repo/pool repo/public.key publish/
 
-      - name: Deploy to GitHub Pages branch
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: published
+          publish_dir: publish
+
+
