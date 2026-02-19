@@ -79,8 +79,14 @@ jobs:
         run: |
           curl -fL "$DEB_URL" -o "repo/incoming/$DEB_FILENAME"
 
-      - name: Include package (idempotent)
+      - name: Rebuild index and include package (idempotent)
         run: |
+          if [ -d repo/pool ]; then
+            while IFS= read -r EXISTING_DEB; do
+              reprepro -b repo includedeb stable "$EXISTING_DEB"
+            done < <(find repo/pool -type f -name '*.deb' | sort)
+          fi
+
           DEB_PATH=$(ls -1 repo/incoming/*.deb | head -n 1)
           PKG_NAME=$(dpkg-deb -f "$DEB_PATH" Package)
           PKG_VERSION=$(dpkg-deb -f "$DEB_PATH" Version)
@@ -89,6 +95,25 @@ jobs:
             echo "Package $PKG_NAME version $PKG_VERSION already present. Skipping include."
           else
             reprepro -b repo includedeb stable "$DEB_PATH"
+          fi
+
+      - name: Update package lists in docs
+        run: |
+          chmod +x scripts/update-package-lists.sh
+          scripts/update-package-lists.sh repo/dists/stable/main/binary-amd64/Packages .
+
+      - name: Commit documentation updates
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if git diff --quiet -- README.md index.html; then
+            echo "No documentation changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md index.html
+            git commit -m "docs: update published package list"
+            git push origin "HEAD:${DEFAULT_BRANCH}"
           fi
 
       - name: Export public key
@@ -108,5 +133,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: publish
-
-

@@ -22,9 +22,10 @@ sudo apt install <nombre-paquete>
 
 Listado de aplicaciones instalables verificado en `dists/stable/main/binary-amd64/Packages`:
 
-- `beyondsqlexecutor`
+<!-- PACKAGES-LIST:START -->
+- `loteriadenavidad` (`2.7.0`)
+<!-- PACKAGES-LIST:END -->
 
 Rutas útiles:
 - Índice de paquetes: `https://jcprieto.github.io/jklabs-apt-repo/dists/stable/main/binary-amd64/Packages`
 - Metadata de release: `https://jcprieto.github.io/jklabs-apt-repo/dists/stable/Release`
-
