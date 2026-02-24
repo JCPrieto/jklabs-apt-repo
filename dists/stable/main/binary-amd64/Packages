@@ -1,18 +1,18 @@
 Package: beyondsqlexecutor
-Version: 1.1.8
+Version: 1.1.9
 Maintainer: Juan Carlos Prieto Silos <JuanC.Prieto.Silos@gmail.com>
 Architecture: amd64
 Provides: beyondsqlexecutor
 Priority: optional
 Section: Development
-Filename: pool/main/b/beyondsqlexecutor/beyondsqlexecutor_1.1.8_amd64.deb
-Size: 66028036
-SHA256: 3c852eda4c38f3d77b9ed78318a0375c9cba0c677606612a64a7c0294b622ee9
-SHA1: 29c56568a813e7ff7b302dbe4713cacf2e39c588
-MD5sum: 8b4d82e65117b4b610852ea2bf574ec9
+Filename: pool/main/b/beyondsqlexecutor/beyondsqlexecutor_1.1.9_amd64.deb
+Size: 65991188
+SHA256: 2dd343483866700cce58b734f02989cdccb4734841966b4f3115e356caebe015
+SHA1: 76c41e27f459e34047a59a8527a604ca6dc19d70
+MD5sum: 2ee4d0a3abd8c4f239f6a7266fbe0217
 Description: Lanzador de sentencias SQL de manera masiva contra varias bases de datos: MySQL, MariaDB o PostgreSQL
 Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6, libxi6, libxrender1, libxtst6, xdg-utils 
-Installed-Size: 196633
+Installed-Size: 196184
 Homepage: https://github.com/JCPrieto/BeyondSQLExecutor
 
 Package: loteriadenavidad
