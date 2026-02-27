@@ -2,19 +2,19 @@ Origin: JKLabs
 Label: JKLabs APT
 Suite: stable
 Codename: stable
-Date: Wed, 25 Feb 2026 20:51:29 UTC
+Date: Fri, 27 Feb 2026 20:50:54 UTC
 Architectures: amd64
 Components: main
 Description: JKLabs Debian Repository
 MD5Sum:
- 3b735192ceed910d4334f9082ce81935 1971 main/binary-amd64/Packages
- 9533ab82a9e14c695e35cdbb62cd598c 910 main/binary-amd64/Packages.gz
+ f8f180c88d910f6d1849e93b4b7f940f 1973 main/binary-amd64/Packages
+ 25ec1d63947ded25bd79ee74f8d5a97a 906 main/binary-amd64/Packages.gz
  dbd4c5a463e5385c458a28ffcd30a1ca 123 main/binary-amd64/Release
 SHA1:
- 1cfa9ba107360cb7b03d74043ee822d9e3bc143d 1971 main/binary-amd64/Packages
- ef4a37c830641856758470a1345061672d701dea 910 main/binary-amd64/Packages.gz
+ e27e81fa3b8d0fd0d97f1a6f903705dad772fcf2 1973 main/binary-amd64/Packages
+ 18545949d638bf6b45951770f711f5065711884d 906 main/binary-amd64/Packages.gz
  9aa67f66c0799a63398ac0d4025a21f570f7a480 123 main/binary-amd64/Release
 SHA256:
- 05ab9ec8a2501fd59f66e0bfa84e8c518c6657930f4c189a66b287d3c51f128c 1971 main/binary-amd64/Packages
- a9f9aa293c0395a511dc167753cbc7cbd2d7549b5407d02cc3a3e92538af17ee 910 main/binary-amd64/Packages.gz
+ 56fdbbfc95959feb9d73ddd4d146fcc1dccf589552c9cf3d378abb049d334f16 1973 main/binary-amd64/Packages
+ 9403d03752f1e82740632eb2285f6efc6a95a94d2e6a41ec3b41aba2dd49a4dd 906 main/binary-amd64/Packages.gz
  be3425e3a3d495d2622a68848e23efc17f8353b1c4c16b498573f3bc22b13aa7 123 main/binary-amd64/Release
