@@ -23,7 +23,7 @@ sudo apt install <nombre-paquete>
 Listado de aplicaciones instalables verificado en `dists/stable/main/binary-amd64/Packages`:
 
 <!-- PACKAGES-LIST:START -->
-- `beyondsqlexecutor` (`1.1.9`)
+- `beyondsqlexecutor` (`1.1.10`)
 - `loteriadenavidad` (`2.7.1`)
 <!-- PACKAGES-LIST:END -->
 
