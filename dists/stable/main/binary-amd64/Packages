@@ -1,3 +1,20 @@
+Package: beyonddeploy
+Version: 1.0.0
+Maintainer: Juan Carlos Prieto Silos <JuanC.Prieto.Silos@gmail.com>
+Architecture: amd64
+Provides: beyonddeploy
+Priority: optional
+Section: Development
+Filename: pool/main/b/beyonddeploy/beyonddeploy_1.0.0_amd64.deb
+Size: 51049882
+SHA256: e94199a6e84bc6e22d7355df60432d9b2d70e6de1993cd4e594d62d3c47d6018
+SHA1: b2152060377eabaea5117c14028af62a85da2377
+MD5sum: ed43d9eb1677e34f14b894c73c559271
+Description: Aplicación de escritorio para gestionar despliegues y ficheros en Amazon S3
+Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6, libxi6, libxrender1, libxtst6, xdg-utils 
+Installed-Size: 179247
+Homepage: https://github.com/JCPrieto/BeyondDeploy
+
 Package: beyondsqlexecutor
 Version: 1.1.10
 Maintainer: Juan Carlos Prieto Silos <JuanC.Prieto.Silos@gmail.com>
