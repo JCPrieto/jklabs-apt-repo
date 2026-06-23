@@ -23,7 +23,7 @@ sudo apt install <nombre-paquete>
 Listado de aplicaciones instalables verificado en `dists/stable/main/binary-amd64/Packages`:
 
 <!-- PACKAGES-LIST:START -->
-- `beyonddeploy` (`1.0.0`)
+- `beyonddeploy` (`1.1.0`)
 - `beyondsqlexecutor` (`1.3.1`)
 - `loteriadenavidad` (`2.7.12`)
 <!-- PACKAGES-LIST:END -->
