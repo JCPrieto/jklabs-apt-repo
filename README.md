@@ -24,7 +24,7 @@ Listado de aplicaciones instalables verificado en `dists/stable/main/binary-amd6
 
 <!-- PACKAGES-LIST:START -->
 - `beyonddeploy` (`1.1.0`)
-- `beyondsqlexecutor` (`1.3.2`)
+- `beyondsqlexecutor` (`1.3.3`)
 - `loteriadenavidad` (`2.7.14`)
 <!-- PACKAGES-LIST:END -->
 
