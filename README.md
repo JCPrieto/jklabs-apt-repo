@@ -23,6 +23,7 @@ sudo apt install <nombre-paquete>
 Listado de aplicaciones instalables verificado en `dists/stable/main/binary-amd64/Packages`:
 
 <!-- PACKAGES-LIST:START -->
+- `ads-generator` (`1.2.0`)
 - `beyonddeploy` (`1.1.0`)
 - `beyondsqlexecutor` (`1.3.3`)
 - `loteriadenavidad` (`2.7.14`)
