@@ -1,3 +1,19 @@
+Package: ads-generator
+Version: 1.2.0
+Maintainer: Unknown <Juan Carlos Prieto Silos>
+Architecture: amd64
+Provides: ads-generator
+Priority: optional
+Section: Development
+Filename: pool/main/a/ads-generator/ads-generator_1.2.0_amd64.deb
+Size: 43125674
+SHA256: 902711131d932e24439b3f2f7bd04b0cf313b213d1df44a8f192ec3ebe5ee7fe
+SHA1: 7039c8333772a8b5dba9815d8394d5f80c75f406
+MD5sum: eeeb9a1166eff1656987014623e8f8e3
+Description: ADS Generator
+Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6, libxi6, libxrender1, libxtst6, xdg-utils 
+Installed-Size: 170896
+
 Package: beyonddeploy
 Version: 1.1.0
 Maintainer: Juan Carlos Prieto Silos <JuanC.Prieto.Silos@gmail.com>
