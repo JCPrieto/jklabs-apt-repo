@@ -15,20 +15,20 @@ Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmc
 Installed-Size: 170896
 
 Package: beyonddeploy
-Version: 1.1.0
+Version: 1.1.1
 Maintainer: Juan Carlos Prieto Silos <JuanC.Prieto.Silos@gmail.com>
 Architecture: amd64
 Provides: beyonddeploy
 Priority: optional
 Section: Development
-Filename: pool/main/b/beyonddeploy/beyonddeploy_1.1.0_amd64.deb
-Size: 59941696
-SHA256: 6c051d8ddecb227adf7c1c9acadf8cecfed35735c9b1bb77f41df42ed6b20307
-SHA1: 2c7e7de24a820a4c7dbaceb5e1096776c5df7977
-MD5sum: 960ea9c63170aaec062edbaa4f73ae96
+Filename: pool/main/b/beyonddeploy/beyonddeploy_1.1.1_amd64.deb
+Size: 59784880
+SHA256: 655830da0fe40db7bbfebcc6862ff68f69d9b419ab2b14f5c2befadd38b7d2f4
+SHA1: b26b2531290a3bf8c352f5741e8f6e08e29b86ae
+MD5sum: 05e0bf787e869fb4a3be4dd05550ba96
 Description: Aplicación de escritorio para gestionar despliegues y ficheros en Amazon S3
 Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6, libxi6, libxrender1, libxtst6, xdg-utils 
-Installed-Size: 190366
+Installed-Size: 189827
 Homepage: https://github.com/JCPrieto/BeyondDeploy
 
 Package: beyondsqlexecutor
