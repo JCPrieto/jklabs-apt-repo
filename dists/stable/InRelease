@@ -5,35 +5,35 @@ Origin: JKLabs
 Label: JKLabs APT
 Suite: stable
 Codename: stable
-Date: Wed, 29 Jul 2026 19:03:52 UTC
+Date: Sun, 02 Aug 2026 16:21:30 UTC
 Architectures: amd64
 Components: main
 Description: JKLabs Debian Repository
 MD5Sum:
- 01a143272d46f620b89f85d91e077204 3300 main/binary-amd64/Packages
- f297ebab3467e91bbb6d60aa482c3d7e 1247 main/binary-amd64/Packages.gz
+ 7b0313baf540998383a481d3cdc08ee3 3300 main/binary-amd64/Packages
+ 6000927ef4898fe0efc1abc3ba76f556 1253 main/binary-amd64/Packages.gz
  dbd4c5a463e5385c458a28ffcd30a1ca 123 main/binary-amd64/Release
 SHA1:
- feaa694399c4de9c33b0620e3cb7780cfea5c096 3300 main/binary-amd64/Packages
- e9d1413bc783f858c6a22a94be76b32f8340af37 1247 main/binary-amd64/Packages.gz
+ c739526755cac419eb79d0ac5a2cd11be399971a 3300 main/binary-amd64/Packages
+ 1a640a094b9ad651d5595058ab2edeb683703c4b 1253 main/binary-amd64/Packages.gz
  9aa67f66c0799a63398ac0d4025a21f570f7a480 123 main/binary-amd64/Release
 SHA256:
- e8ef742b961f7cef7fb5fb721321dfc280ce7f3a47fc75fdaf453f68fc9d3c3d 3300 main/binary-amd64/Packages
- a2d097305b13477bbced687b77e72ef8dd9d1cfa59586121857f16eb6930faaa 1247 main/binary-amd64/Packages.gz
+ 4ad4b5c566cc7cce3bca1076f70b9cb244755053b010408eaea3722079f4f273 3300 main/binary-amd64/Packages
+ 84be36ba85594821efeb0830b56d8bbbe491761cde407b0d8e5fe8252c3ec582 1253 main/binary-amd64/Packages.gz
  be3425e3a3d495d2622a68848e23efc17f8353b1c4c16b498573f3bc22b13aa7 123 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEESqiWnxG7hvYkA4jiobWvwGO40xkFAmpqTpgACgkQobWvwGO4
-0xkOGhAAwTXTzOwnrT8aOommZq/4xyDXqAScDsA9jhUYVMPeBaoiTTJbcerggceV
-7mxZFLhJkuLAGM2/OFokGO/FU2FVmLvmdFO3GkIEhpjg+3VLy8ixujh7GFD0rJk6
-/gB7QK9lpI3nQ8YxEPfuxJ/KJUCWVgUD4BEM98hb/Na0roPIos6GyAmwjV6N/DCv
-+BgKkdAlGxQk0YyNY8YYaDe1oprZejz/dBeymgbWL6acHS9lqwhmztUl9dA29yK1
-CZotI25DpuKOgLFssp5Ohd1jAUk8ltX17Cau+fZDyRQw5vS/JMqcz38L7/lHOuEi
-56X4unompsJtW6etHAlUVGANMOvBg5sylbrtFmrzgpQ/bpi3KH+aUrcAIf7K5v+W
-kvQsCNMuU9kxi7aK1cv+J/5dRBw3K8XCHnPdEbK093/KL1x6ujJJQi1Px9d1l6Op
-N9thEachJ0L4eXXFO3IyGemUdpGA0x6wnE+/XbmiqJg277GeCQ+cMV6uimQuQRxs
-H6NPg21ysjogP6PU1qRjos5mEv1qWeKbwjEsaBARDDLTBSoU9Mbk2zuTyqDNvX84
-1xUZ6Xo5r7YCDdWmMKq2B/xXPwVCjmB6rglpSBTZKRZJb3XoXA3jgL9ND5K5FJwK
-2Ryc4wypS+BFRFwBfFVPYB5W1KNwYrnrxjLkMlu6GznJmKMdC8Y=
-=3Nzm
+iQIzBAEBCgAdFiEESqiWnxG7hvYkA4jiobWvwGO40xkFAmpvbooACgkQobWvwGO4
+0xnpixAAn6t2jgFYdNvzTLmN+w7VEb0MscT1/hZOX7vziVWAt8Dk08dawTNF0EOP
+Frx58fGtLI9KZgjXbZMktCi4WwfvBPpX5Ru0SuBwh8kqPxsoEu/0ZXe/idaCzvkn
+nKZ7GdKqHInvK0bnpA0kShh+LpcxYcMK8PxLOapx15+cTgRV8DUsgeTOZyvN6Nmk
+Ou3kpu3paefhRYO/qRtuf1v5jrRZLNbDF/0F9GlBlD87TTVKHb+a+7DgBFO+o6b4
+pOW6+bakazGrakDPyVMEO+MwMKBSAYIPsNyjBPO+nmQr914QPY9Ny8/ozTu7C9Hl
+SQlZl0etSPzwjRCON9lTtT2tMQgdbUk/i5S7WgXgU61GUVGhHj3Y8cCsdzyeENAW
+cHpj/yNlTJA+AC/HUnQtfB9eRNzEGhtRrpZwu7vtuFIFSj2e3akAfADhuqc01+hH
+qayT3JxwDylY1ykTg5GobkdP39dRvr7Mvua7XqgDkOQ8NiNm3t7XTKNctvwOH/RG
+fpJMd+1WBfA9aKYCjw8H4G0PeVtoYvHzjNFTWe1JWSctQjmvGQ/R4YEfOeA+5GKS
+n0YmnBdgy1T7HxmnpQtrZvmsOrxP3yckLVdODvvzNuzQWfCQ905Rx2yL3wi0eXEt
+Sn8k0bFr08CD4F8mLl+anlx8ytFJVSchsRvXiHQiPMKlSItSZKY=
+=P6Zf
 -----END PGP SIGNATURE-----
