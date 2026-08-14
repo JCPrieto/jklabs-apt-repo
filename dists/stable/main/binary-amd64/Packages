@@ -49,23 +49,23 @@ Installed-Size: 172214
 Homepage: https://github.com/JCPrieto/BeyondSQLExecutor
 
 Package: loteriadenavidad
-Version: 2.7.17
+Version: 3.0.0
 Maintainer: JKLabs <JuanC.Prieto.Silos@gmail.com>
 Architecture: amd64
 Provides: loteriadenavidad
 Priority: optional
 Section: Game
-Filename: pool/main/l/loteriadenavidad/loteriadenavidad_2.7.17_amd64.deb
-Size: 57337746
-SHA256: ba2241c02f91009dae5208e166f88f0d576b206ac824416a92cf313fb5af9249
-SHA1: 7838cae462e98f378416289b190f02c1cc051b82
-MD5sum: 3aec7c31b86dd9c79ff4ce9c4cd069ea
+Filename: pool/main/l/loteriadenavidad/loteriadenavidad_3.0.0_amd64.deb
+Size: 57971972
+SHA256: e776cc8f51e242c7e77a9c4100b9eff98d91a11b44db47165ecf0d2a6c57260c
+SHA1: ad14157515cd14bdc3a47c0d98dc8c8047e72161
+MD5sum: be7fbdce5ad88939d784d0d0fe0fbb34
 Description: Aplicación para la comprobación de los numeros premiados de la lotería
                                             de Navidad y de El Niño
 Depends: libasound2, libbsd0, libc6, libmd0, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6, libxi6, libxrender1, libxtst6, xdg-utils , libasound2 | libasound2t64, libbrotli1, libbsd0, libbz2-1.0, libc6, libfreetype6, libgcc-s1,
             libgif7, libglib2.0-0 | libglib2.0-0t64, libgraphite2-3, libharfbuzz0b, libjpeg-turbo8, liblcms2-2, libmd0,
             libpcre2-8-0, libpcsclite1, libpng16-16 | libpng16-16t64, libstdc++6, libx11-6, libxau6, libxcb1, libxdmcp6,
             libxext6, libxi6, libxrender1, libxtst6, xdg-utils, zlib1g
-Installed-Size: 188050
+Installed-Size: 161096
 Homepage: https://github.com/JCPrieto/LoteriasJava
 
